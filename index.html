@@ -1,11 +1,81 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploring Contianer Query</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploring Contianer Query</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+  <section>
+    <p class="title">Responsive with media Query</p>
+    <div class="flex">
+      <main class="flex-4">
+        <!-- card isn't wrapped within container to be queried -->
+        <!-- card start :: here all cards have same structure -->
+        <div class="card">
+          <div class="image"></div>
+          <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            doloremque officia id, sunt beatae itaque soluta ducimus sint
+            sapiente perferendis numquam eaque reiciendis. Molestiae nulla
+          </div>
+        </div>
+        <!-- card end -->
+      </main>
+      <aside class="flex-1">
+        <!-- card isn't wrapped within container to be queried -->
+        <!-- card start :: here all cards have same structure -->
+        <div class="card">
+          <div class="image"></div>
+          <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            doloremque officia id, sunt beatae itaque soluta ducimus sint
+            sapiente perferendis numquam eaque reiciendis. Molestiae nulla
+          </div>
+        </div>
+        <!-- card end -->
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <p class="title">Responsive with Container Query</p>
+    <div class="flex">
+      <main class="flex-4">
+        <!-- card wrapped within container to be queried -->
+        <div class="contianer">
+          <!-- card start :: here all cards have same structure -->
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              doloremque officia id, sunt beatae itaque soluta ducimus sint
+              sapiente perferendis numquam eaque reiciendis. Molestiae nulla
+            </div>
+          </div>
+          <!-- card end-->
+        </div>
+      </main>
+      <aside class="flex-1">
+        <!-- card wrapped within container to be queried -->
+        <div class="contianer">
+          <!-- card start :: here all cards have same structure -->
+          <div class="card">
+            <div class="image"></div>
+            <div class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              doloremque officia id, sunt beatae itaque soluta ducimus sint
+              sapiente perferendis numquam eaque reiciendis. Molestiae nulla
+            </div>
+          </div>
+          <!-- card end-->
+        </div>
+      </aside>
+    </div>
+  </section>
 </body>
+
 </html>

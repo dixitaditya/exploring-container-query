@@ -1,0 +1,64 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+.flex-1 {
+  width: 20%;
+}
+.flex-4 {
+  width: 80%;
+  padding-right: 20;
+  border-right: 1px solid #888;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 20;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.image {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+.text {
+  flex: 1;
+  font-size: 26px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
+.contianer {
+  /* container-type gives ability to do container query */
+  container-type: inline-size; 
+  /* container-name gives ability to query wrt specifc container, 
+  else closest container will be selected */
+  container-name: containerOne;
+}
+
+/* With container queries, customization and resizing become 
+possible according to the size of the container, rather
+than being reliant solely on responsive media widths. */
+@container containerOne (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+  .image {
+    /* size wrt container width */
+    /* with inline size we only have access to cqw and not cqh */
+    width: 80cqw;
+  }
+}
